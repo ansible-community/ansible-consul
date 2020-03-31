@@ -941,6 +941,18 @@ packages with different package names.
 - [RPC hold timeout](https://www.consul.io/docs/agent/options.html#rpc_hold_timeout) is the duration that a client or server will retry internal RPC requests during leader elections
 - Default value: 7s
 
+#### `leave_on_terminate`
+
+- [Leave on terminate](https://www.consul.io/docs/agent/options.html#leave_on_terminate) determine if we want to leave the cluster when consul receive a TERM signal.
+
+- Default value: undefined
+
+#### `skip_leave_on_interrupt`
+
+- [Skip leave on interrupt](https://www.consul.io/docs/agent/options.html#skip_leave_on_interrupt) determine if we want skip leave the cluster when consul receive an interrupt signal.
+
+- Default value: undefined
+
 ## Dependencies
 
 Ansible requires GNU tar and this role performs some local use of the unarchive module for efficiency, so ensure that your system has `gtar` and `unzip` installed and in the PATH. If you don't this role will install `unzip` on the remote machines to unarchive the ZIP files.
