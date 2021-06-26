@@ -1,0 +1,11 @@
+---
+# File: Alpine.yml - Alpine variables for Consul
+consul_os_packages:
+  - git
+  - unzip
+  - openrc
+consul_syslog_enable: false
+
+# PID file location should not be configurable for openrc
+# Ref: https://github.com/OpenRC/openrc/blob/master/service-script-guide.md#dont-let-the-user-control-the-pid-file-location
+consul_run_path: "/var/run"
